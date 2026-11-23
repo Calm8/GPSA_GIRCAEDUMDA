@@ -340,9 +340,9 @@ function codes = initializeCodes1(codes,FVr_minbound,FVr_maxbound,FVr_bestmemit)
     for jjj=1:ws
           hs=sum(~isnan(codes(:,jjj)));
         if hs==2 && FVr_bestmemit(jjj)==FVr_minbound(jjj)
-            codes(hs,jjj)=(FVr_maxbound(jjj)+FVr_minbound(jjj))/2;
+            codes(hs,jjj)=0;
         elseif  hs==2 && FVr_bestmemit(jjj)==FVr_maxbound(jjj)
-             codes(1,jjj)=(FVr_maxbound(jjj)+FVr_minbound(jjj))/2;
+             codes(1,jjj)=0;
         end
     end
 end    
